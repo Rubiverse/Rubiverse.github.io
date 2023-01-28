@@ -25,6 +25,15 @@ document.querySelectorAll('a[href^="#AboutUs"]').forEach(anchor => {
         });
     });
 });
+document.querySelectorAll('a[href^="#solve-div"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
 
 records = document.getElementById("records");
 records.addEventListener(click, function(){
